@@ -46,13 +46,14 @@ class Veicolo {
         return `Il veicolo è della marca ${this.#marca} dell'anno ${this.#anno} e il suo colore è  ${this.#colore}`;
     };
 
-    annoAttuale() {
+    //metodo privato
+    #annoAttuale() {
         const dataCorrente = new Date();
         return dataCorrente.getFullYear();
     };
 
     calcolaEta() {
-        const annoCorrente = this.annoAttuale();
+        const annoCorrente = this.#annoAttuale();
         return annoCorrente - this.#anno;
     }
 }
