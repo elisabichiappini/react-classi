@@ -31,15 +31,15 @@ http.createServer((req, res ) => {
 
 
 class Veicolo {
-    #marca;
-    #anno;
-    #colore;
+    // #marca;
+    // #anno;
+    // #colore;
 
     //costruttore
     constructor(marca_, anno_, colore_) {
-        this.#marca = marca_;
-        this.#anno = anno_;
-        this.#colore = colore_;
+        this.marca = marca_;
+        this.anno = anno_;
+        this.colore = colore_;
     }
 }
 
