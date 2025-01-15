@@ -16,3 +16,15 @@ http.createServer((req, res ) => {
 .listen(port, host, () => {
     console.log(`server avviato su http://${host}:${port}`);
 });
+
+//CLASSI
+// creare una classe in js chiamata "Veicolo" con proprietà e metodi. La classe "Veicolo" dovrebbe 
+// avere le seguenti caratteristiche:
+//proprietà private : 
+// - `marca`: stringa
+// - `anno`: numero
+// - `colore`: stringa
+//Metodi: 
+// - `informazioni()` : metodo che restituisce una stringa con tutte le info del veicolo sopra elencate
+// - `annoAttuale()` : metodo che restituisce l'anno corrente / puoi utilizzare la classe `Date di js per  ottenre l'anno corrente`
+// - `calcolaEta()`: metodo che calcola e restituisce l'età del veicolo in anni / differenza tra anno corrente e anno di fabbricazione
