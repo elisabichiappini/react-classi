@@ -31,18 +31,22 @@ http.createServer((req, res ) => {
 
 
 class Veicolo {
-    // #marca;
-    // #anno;
-    // #colore;
+    #marca;
+    #anno;
+    #colore;
 
     //costruttore
     constructor(marca_, anno_, colore_) {
-        this.marca = marca_;
-        this.anno = anno_;
-        this.colore = colore_;
+        this.#marca = marca_;
+        this.#anno = anno_;
+        this.#colore = colore_;
+    }
+
+    informazioni() {
+        return `Il veicolo è della marca ${this.#marca} dell'anno ${this.#anno} e il suo colore è  ${this.#colore}`;
     }
 }
 
 //istanza
 const auto1 = new Veicolo('Fiat', 2000, 'red');
-console.log(auto1);
+console.log(auto1.informazioni());
