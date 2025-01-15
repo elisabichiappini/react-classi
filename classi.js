@@ -28,3 +28,21 @@ http.createServer((req, res ) => {
 // - `informazioni()` : metodo che restituisce una stringa con tutte le info del veicolo sopra elencate
 // - `annoAttuale()` : metodo che restituisce l'anno corrente / puoi utilizzare la classe `Date di js per  ottenre l'anno corrente`
 // - `calcolaEta()`: metodo che calcola e restituisce l'età del veicolo in anni / differenza tra anno corrente e anno di fabbricazione
+
+
+class Veicolo {
+    #marca;
+    #anno;
+    #colore;
+
+    //costruttore
+    constructor(marca_, anno_, colore_) {
+        this.#marca = marca_;
+        this.#anno = anno_;
+        this.#colore = colore_;
+    }
+}
+
+//istanza
+const auto1 = new Veicolo('Fiat', 2000, 'red');
+console.log(auto1);
