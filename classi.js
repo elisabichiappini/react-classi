@@ -45,8 +45,14 @@ class Veicolo {
     informazioni() {
         return `Il veicolo è della marca ${this.#marca} dell'anno ${this.#anno} e il suo colore è  ${this.#colore}`;
     }
+
+    annoAttuale() {
+        const dataCorrente = new Date();
+        return dataCorrente.getFullYear();
+    }
 }
 
 //istanza
 const auto1 = new Veicolo('Fiat', 2000, 'red');
-console.log(auto1.informazioni());
+
+console.log(auto1.annoAttuale());
