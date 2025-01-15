@@ -61,4 +61,33 @@ class Veicolo {
 //istanza
 const auto1 = new Veicolo('Fiat', 2000, 'red');
 
-console.log(auto1.calcolaEta());
+// console.log(auto1.calcolaEta());
+
+
+// estendere la classe veicolo con la classe chiamata "Automobile" che eredita tutte le proprietà e aggiunge:
+// Proprietà agg:
+// - `numeroPorte` : numero intero 
+// - `isDiesel` : valore booleano, se benzina false
+// Metodo agg: 
+// - `tipoCarburante()` : metodo che restituisce una stirnga indicando il tipo di carburante dell'automobile ("Diesel" se `isDiesel` è true, altrimenti "Benzina")
+
+class Automobile extends Veicolo {
+
+    //passiamo constructor per le proprietà di veicolo
+    constructor(marca_, anno_, colore_, numeroPorte_, isDiesel_) {
+        //super serve per fare il constructor del padre
+        super(marca_, anno_, colore_);
+        //essendo public queste proprietà non devono essere dichiarate e in fase di costruzione le dò 
+        this.numeroPorte = numeroPorte_;
+        this.isDiesel = isDiesel_;
+    }
+    tipoCarburante() {
+        //ternario
+        return this.isDiesel ? "Diesel" : "Benzina";
+    }
+    
+}
+
+const auto2 = new Automobile("Fiat", 1994, "blue", 5, false);
+
+console.log(auto2.tipoCarburante());
